@@ -1,6 +1,14 @@
 # TextSimilarity
 
+## Run tests
+
+``cd TextSimilarity.Tests\``
+
+#### All tests
+
 Run ``dotnet test`` to execute all test
+
+### Specific test
 
 Run ``dotnet test --test <method>`` to execute specific test, for example:
 
