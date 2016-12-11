@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<test-run id="0" testcasecount="0" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" result="Passed" portable-engine-version="3.3.0.0" start-time="2016-12-11 08:31:13Z" end-time="2016-12-11 08:31:13Z" duration="0.115016">
-  <test-run id="0" testcasecount="0" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" result="Passed" portable-engine-version="3.3.0.0" start-time="2016-12-11 08:31:13Z" end-time="2016-12-11 08:31:13Z" duration="0.042009">
-    <test-suite type="Assembly" id="1020" name="TextSimilarity.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" fullname="TextSimilarity.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" runstate="Runnable" testcasecount="15" result="Passed" start-time="2016-12-11 08:31:13Z" end-time="2016-12-11 08:31:13Z" duration="0.002926" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
+<test-run id="0" testcasecount="0" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" result="Passed" portable-engine-version="3.3.0.0" start-time="2016-12-11 08:38:13Z" end-time="2016-12-11 08:38:13Z" duration="0.111005">
+  <test-run id="0" testcasecount="0" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" result="Passed" portable-engine-version="3.3.0.0" start-time="2016-12-11 08:38:13Z" end-time="2016-12-11 08:38:13Z" duration="0.042000">
+    <test-suite type="Assembly" id="1020" name="TextSimilarity.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" fullname="TextSimilarity.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" runstate="Runnable" testcasecount="15" result="Passed" start-time="2016-12-11 08:38:13Z" end-time="2016-12-11 08:38:13Z" duration="0.002884" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
       <settings>
         <setting name="WorkDirectory" value="C:\PROJECTDATA\IFRAMEWORX\TextSimilarity\TextSimilarity.Tests" />
       </settings>
