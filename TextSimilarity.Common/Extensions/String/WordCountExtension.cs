@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace TextSimilarity.Common.Extensions.String
@@ -8,7 +8,8 @@ namespace TextSimilarity.Common.Extensions.String
     {
         public static Dictionary<string, int> WordCount(this string value)
         {
-            var result = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+            var result = new Dictionary<string, int>(
+                CultureInfo.InvariantCulture.CompareInfo.GetStringComparer(CompareOptions.IgnoreCase));
             if (string.IsNullOrEmpty(value)) return result;
 
             var words = Regex.Split(value, @"[\s]+");

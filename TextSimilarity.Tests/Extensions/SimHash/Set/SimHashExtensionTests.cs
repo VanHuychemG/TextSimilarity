@@ -17,11 +17,11 @@ namespace TextSimilarity.Tests.Extensions.SimHash.Set
             const string text2 = "The best way to save your money is to fold it over and put it back in your pocket";
             //Act
             var result = text1.WordShingles()
-                                .SimHash(x => x.GetHashCode())
+                                .SimHash(x => x.GetHashCodeAlt2())
                                 .HammingDistance(text2.WordShingles()
-                                                             .SimHash(x => x.GetHashCode()));
+                                                             .SimHash(x => x.GetHashCodeAlt2()));
             //Assert
-            Assert.AreEqual(4, result, 0.01);
+            Assert.AreEqual(5, result, 0.01);
         }
 
         [Test]
@@ -32,9 +32,9 @@ namespace TextSimilarity.Tests.Extensions.SimHash.Set
             const string text2 = "Even if you’re on the right track, you’ll get run over if you just sit there";
             //Act
             var result = text1.WordShingles()
-                                .SimHash(x => x.GetHashCode())
+                                .SimHash(x => x.GetHashCodeAlt2())
                                 .HammingDistance(text2.WordShingles()
-                                                             .SimHash(x => x.GetHashCode()));
+                                                             .SimHash(x => x.GetHashCodeAlt2()));
             //Assert
             Assert.AreEqual(14, result);
         }
@@ -47,9 +47,9 @@ namespace TextSimilarity.Tests.Extensions.SimHash.Set
             const string text1 = "the cat sat on the mat";
             const string text2 = "the cat sat on a mat";
             //Act
-            var result = text1.CharacterShingles().SimHash(x => x.GetHashCode()).HammingDistance(text2.CharacterShingles().SimHash(x => x.GetHashCode()));
+            var result = text1.CharacterShingles().SimHash(x => x.GetHashCodeAlt2()).HammingDistance(text2.CharacterShingles().SimHash(x => x.GetHashCodeAlt2()));
             //Assert
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(4, result);
         }
 
         [Test]
@@ -59,9 +59,9 @@ namespace TextSimilarity.Tests.Extensions.SimHash.Set
             const string text1 = "the cat sat on the mat";
             const string text2 = "we all scream for ice cream";
             //Act
-            var result = text1.CharacterShingles().SimHash(x => x.GetHashCode()).HammingDistance(text2.CharacterShingles().SimHash(x => x.GetHashCode()));
+            var result = text1.CharacterShingles().SimHash(x => x.GetHashCodeAlt2()).HammingDistance(text2.CharacterShingles().SimHash(x => x.GetHashCodeAlt2()));
             //Assert
-            Assert.AreEqual(3, result);
+            Assert.AreEqual(11, result);
         }
     }
 }

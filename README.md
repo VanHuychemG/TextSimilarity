@@ -1,6 +1,6 @@
 # TextSimilarity
 
-## Run tests
+## Run tests (https://github.com/nunit/docs/wiki/Console-Command-Line)
 
 ``cd TextSimilarity.Tests\``
 

@@ -20,24 +20,16 @@ namespace TextSimilarity.Extensions.SimHash.Set
                 for (var j = 0; j < hashVector.Length; j++)
                 {
                     if ((tempHash & mask) > 0)
-                    {
                         hashVector[j]++;
-                    }
                     else
-                    {
                         hashVector[j]--;
-                    }
                     mask <<= 1;
                 }
             }
 
             for (var i = 0; i < hashVector.Length; i++)
-            {
                 if (hashVector[i] > 0)
-                {
                     simHash |= 1 << i;
-                }
-            }
 
             return simHash;
         }
