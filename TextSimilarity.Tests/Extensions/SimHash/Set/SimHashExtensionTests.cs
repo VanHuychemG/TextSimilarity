@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 using TextSimilarity.Common.Extensions.String;
 using TextSimilarity.Extensions.SimHash.Integer;
@@ -16,6 +17,13 @@ namespace TextSimilarity.Tests.Extensions.SimHash.Set
             const string text1 = "The quickest way to double your money is to fold it over and put it back in your pocket";
             const string text2 = "The best way to save your money is to fold it over and put it back in your pocket";
             //Act
+
+            Console.WriteLine("text1: {0}", string.Join(",", text1.WordShingles()));
+            Console.WriteLine("text1.SimHash: {0}", string.Join(",", text1.WordShingles().SimHash(x => x.GetHashCode())));
+
+            Console.WriteLine("text2: {0}", string.Join(",", text2.WordShingles()));
+            Console.WriteLine("text2.SimHash: {0}", string.Join(",", text2.WordShingles().SimHash(x => x.GetHashCode())));
+
             var result = text1.WordShingles()
                                 .SimHash(x => x.GetHashCode())
                                 .HammingDistance(text2.WordShingles()

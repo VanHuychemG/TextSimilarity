@@ -24,8 +24,8 @@ namespace TextSimilarity.Common.Extensions.String
 
         public static HashSet<string> WordShingles(this string value, int shingleSize = DefaultShingleSize, int shingleOverlap = DefaultShingleOverlap)
         {
-            if (shingleOverlap >= shingleSize) throw new ArgumentException("Shi" +
-                                                                           "ngle overlap cannot be bigger than the shingle size");
+            if (shingleOverlap >= shingleSize) throw new ArgumentException("Shingle overlap cannot be bigger than the shingle size");
+
             var result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             if (string.IsNullOrEmpty(value)) return result;
 
