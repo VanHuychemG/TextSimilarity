@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace TextSimilarity.Common.Extensions.String
@@ -14,8 +13,8 @@ namespace TextSimilarity.Common.Extensions.String
         {
             if (shingleOverlap >= shingleSize) throw new ArgumentException("Shingle overlap cannot be bigger than the shingle size");
 
-            var result = new HashSet<string>(
-                CultureInfo.InvariantCulture.CompareInfo.GetStringComparer(CompareOptions.IgnoreCase));
+            var result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
             if (string.IsNullOrEmpty(value)) return result;
 
             var loopCount = value.Length - shingleSize;
