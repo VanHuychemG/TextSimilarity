@@ -18,5 +18,11 @@
         "dnxcore50"
       ]
     }
+  },
+
+  "runtimes": {
+    "win10-x64": {},
+    "win10-x86": {},
+    "debian.8-x64": {}
   }
 }
